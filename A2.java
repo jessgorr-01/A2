@@ -46,7 +46,7 @@ public class A2 {
 			Scanner sc = new Scanner(file);		// do not make any other Scanners
 			
 			// Students -- your code and methods calls go here
-
+			
 			
 			
 			
@@ -57,4 +57,40 @@ public class A2 {
 	}
 	
 	// Students -- add your method declarations here
+	/* lookup - a function to lookup operators and parenthese and return the corrospodnding token*/
+	int looku(char ch){
+		System.out.print(" lookup(): %c\n", char);
+		switch(ch){
+			case '(':
+				addChar();
+				nextToken = LEFT_PAREN;
+				break;
+			case ')':
+				addChar();
+				nextToken = RIGHT_PAREN;
+				break;
+			case '+':
+				addChar();
+				nextToken = ASSIGN_OP;
+				break;
+			case '-':
+				addChar();
+				nextToken = SUB_OP;
+				break;
+			case '*':
+				addChar();
+				nextToken= MULT_OP;
+				break;
+			case '/':
+				addChar();
+				nextToken = DIV_OP;
+				break;
+			default:
+				addChar();
+				nextToken=EOF;//fix this line
+				break;
+		}
+		return nextToken;
+	}
 }
+
