@@ -6,7 +6,7 @@ input will be given from a file and output will be displayed on a created file f
 Methods include main
                 lookup(char ch)
                 addChar()
-                get CHar()
+                get Char()
                 getNonBlank()
                 lex()
                 
