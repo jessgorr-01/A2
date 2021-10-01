@@ -92,5 +92,66 @@ public class A2 {
 		}
 		return nextToken;
 	}
+	void addChar(){ //check this method LINES 88-89 in C file
+		if(lexLen<=98){
+			lexeme[lexLen++] = nextChar;
+			lexeme[lexLen]=0;
+			System,out.printf("	addChar() lexeme[]: %s\n", lexeme);
+		}
+		else{
+			System.out.printf("Error - lexeme is too long\");
+		}
+	}
+	void getChar(){ //do this method later
+		
+	}
+	void getNonBlank(){ //check this method
+		while(lexeme.charAt()== " "){
+			Systen.out.printf(" REMOVED SPACE\n");
+			getChar();
+		}
+	}
+	int lex(){ //need to finish this method
+		lexLEn=0;
+		switch(charClass){
+			case LETTER: 	break;
+			case DIGIT:		break;
+			case UNKNOWN:	break;	
+		}
+		getNonBlank();
+		switch(charClass){
+			case LETTER:	break;
+			case DIGIT:	break;
+			case UNKNOWN:	break;
+		}
+		switch (charClass){
+			case LETTER:
+				addChar();
+				getChar();
+				while(charClass == LETTER || charClass == DIGIT){
+					addChar();
+				getChar();}
+				nextToken = IDENT;
+				break;
+				
+			case DIGIT:
+				addChar();
+				getCahr();
+				while(charClass == DIGIT){
+					addChar();
+					getChar();
+				}
+				nextToken =INT_LIT;
+				break;
+				
+			case UNKNOWN:
+				lookup(nextChar);
+				getChar();
+				break;
+				
+				//EOF 
+				//need to do still
+				}
+		}
+	}
 }
-
